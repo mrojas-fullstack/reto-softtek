@@ -1,0 +1,85 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0 48px 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  img {
+    max-width: 480px;
+    border-radius: 1rem;
+  }
+  &__content-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &__content{
+    max-width: 360px;
+  }
+  &__tag{
+    background: linear-gradient(86.01deg, #00F4E2 0%, #00FF7F 100%);
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+      font-family: "Sonoma BR";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0;
+    }
+  }
+  &__title{
+    font-family: "Sonoma BR";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 4px;
+    margin: 0;
+  }
+  &__description{
+    font-family: "Sonoma BR";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 24px;
+    margin: 0;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    &--checkboxes{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    button{
+      width: 195px;
+      height: 64px;
+      opacity: 1;
+      gap: 8px;
+      padding-top: 20px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      border-radius: 40px;
+
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      text-align: center;
+
+    }
+  }
+}

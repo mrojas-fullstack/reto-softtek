@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  min-height: 120px;
+  color: white;
+  width: 100%;
+  font-family: "Sonoma BR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+  width: 100%;
+  color: black;
+  max-width: 1280px;
+  margin: 0 auto;
+  &__contact{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: "Sonoma BR";
+    font-style: normal;
+    &--phone{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;      
+    }
+    &--text{
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

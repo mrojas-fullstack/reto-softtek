@@ -1,0 +1,41 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+
+  input {
+    display: none; // ocultamos el input nativo
+  }
+
+  &__icon{
+    color: white;
+  }
+
+  &__box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: all 0.2s ease;
+
+    &--checked {
+      background: #0b0720; // fondo oscuro
+      border-color: #0b0720;
+    }
+  }
+
+  &__label {
+    user-select: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
