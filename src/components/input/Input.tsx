@@ -11,6 +11,7 @@ function Input() {
         type="text"
         value={celNumber}
         onChange={(e) => setCelNumber(e.target.value)}
+        required
       />
     </div>
   )

@@ -8,7 +8,7 @@
   color: #111;
 
   input {
-    display: none; // ocultamos el input nativo
+    display: none;
   }
 
   &__icon{
@@ -27,7 +27,7 @@
     transition: all 0.2s ease;
 
     &--checked {
-      background: #0b0720; // fondo oscuro
+      background: #0b0720;
       border-color: #0b0720;
     }
   }

@@ -57,6 +57,7 @@ const Select = () => {
           type="text"
           value={docNumber}
           onChange={(e) => setDocNumber(e.target.value)}
+          required
         />
       </div>
     </div>

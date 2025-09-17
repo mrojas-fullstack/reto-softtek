@@ -1,0 +1,119 @@
+.card-planes{
+  box-shadow: 0px 1px 32px 0px #AEACF359;
+  width: 288px;
+  height: 571px;
+  max-width: 220px;
+  padding: 68px 32px 48px 32px;
+  gap: 24px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  &__recomended{
+    background: #7DF0BA;
+    width: 106px;
+    height: 16px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 6px;
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    vertical-align: middle;
+    position: absolute;
+    top: 40px;
+  }
+  &__title{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+    &--text{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      p {
+        font-family: Lato;
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #7981B2;
+      }
+      span {
+        font-family: "Lato";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        text-decoration: line-through;
+        color: #7981B2;
+      }
+    }
+  }
+  img {
+    width: 56px;
+    height: 56px;
+  }
+  h1 {
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    padding-bottom: 24px;
+    margin: 0;
+  }
+  h2 {
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  &__divider{
+    width: 100%;
+    height: 1px;
+    background: #D7DBF5;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 0;
+      padding-inline-start: 20px;
+    }
+    li{
+      font-family: "Lato";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.1px;
+    }
+    &--button{
+      width: 224px;
+      height: 48px;
+      padding: 14px 32px 14px 32px;
+      border-radius: 32px;
+      color: #FFFFFF;
+      background: #FF1C44;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

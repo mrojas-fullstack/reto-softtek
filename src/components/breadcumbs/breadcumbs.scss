@@ -1,0 +1,50 @@
+.breadcumbs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EDEFFC;
+  gap: 16px;
+  width: 100%;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+    
+  &__enabled{
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    span{
+      width: 24px;
+      height: 24px;
+      border: 1px solid #4F4FFF;
+      background: #4F4FFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  &__disabled{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #7981B2;
+    span{
+      width: 24px;
+      height: 24px;
+      border: 1px solid #7981B2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7981B2;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

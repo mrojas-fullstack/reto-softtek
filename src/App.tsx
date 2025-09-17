@@ -2,6 +2,8 @@ import Header from './components/header/Header'
 import Hero from './components/hero/Hero'
 import Footer from './components/footer/Footer'
 import './App.scss'
+import Planes from './components/planes/Planes'
+import Resumen from './components/resumen/Resumen'
 
 function App() {
 
@@ -9,7 +11,9 @@ function App() {
     <>
     <Header />
     <main>
-      <Hero />
+      {/* <Hero /> */}
+      {/* <Planes /> */}
+      <Resumen />
     </main>
     <Footer />
     </>
