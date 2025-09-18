@@ -2,16 +2,18 @@ import { Check } from "lucide-react";
 import "./checkbox.scss";
 
 interface CheckboxProps {
+  id:string;
   label: string;
   checked: boolean;
   onChange: (checked: boolean) => void;
   error?: string;
 }
 
-const Checkbox = ({ label, checked, onChange, error }: CheckboxProps) => {
+const Checkbox = ({ id, label, checked, onChange, error }: CheckboxProps) => {
   return (
-    <label className='checkbox'>
+    <label className='checkbox' htmlFor={id}>
       <input
+        id={id}
         type="checkbox"
         checked={checked}
         onChange={() => onChange(!checked)}

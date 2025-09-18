@@ -1,0 +1,38 @@
+.range{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 200px;
+  &__slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #4f46e5 0%, #4f46e5 var(--value, 0%), #D7DBF5 var(--value, 0%), #D7DBF5 100%);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 8px;
+      height: 8px;
+      background: #4f46e5;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+    }
+
+    // thumb (Firefox)
+    &::-moz-range-thumb {
+      width: 8px;
+      height: 8px;
+      background: #4f46e5;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

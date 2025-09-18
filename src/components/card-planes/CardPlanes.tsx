@@ -11,7 +11,7 @@ interface Card{
   card: CardPlanesProps,
   recomended: boolean,
   icon: string,
-  type: number,
+  type?: number,
 }
 
 function CardPlanes( { card, recomended, icon, type }: Card ) {

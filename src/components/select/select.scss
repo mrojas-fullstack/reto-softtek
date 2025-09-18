@@ -1,13 +1,13 @@
+@import "../../styles/breakpoints";
 .select {
   display: flex;
   align-items: center;
   border: 1px solid #444;
   border-radius: 8px;
   background: #f9faff;
-  min-width: 360px;
   position: relative;
   min-height: 56px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 
   &__error-message{
     font-family: "Sonoma BR";
@@ -35,7 +35,7 @@
   }
 
   &__dropdown {
-    flex: 0 0 100px;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,7 +71,7 @@
 
   &__divider {
     width: 1px;
-    height: 60%;
+    height: 55px;
     background: #444;
   }
 
@@ -95,5 +95,8 @@
       outline: none;
       color: #000;
     }
+  }
+  @include respond(sm) {
+    margin-bottom: 8px;
   }
 }

@@ -32,8 +32,10 @@ function Card( {icon, title, description, idx, selectedOption, setSelectedOption
         </label>
         
       </div>
-      {icon && <img src={icon} alt="Icon"/>}
-      {title && <h1>{title}</h1>}
+      <div className='card__icon-title'>
+        {icon && <img src={icon} alt="Icon"/>}
+        {title && <h1>{title}</h1>}
+      </div>
       {description && <p>{description}</p>}
     </div>
   )

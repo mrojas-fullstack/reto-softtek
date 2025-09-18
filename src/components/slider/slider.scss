@@ -1,0 +1,47 @@
+@import "../../styles/breakpoints";
+.slider{
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    padding-left: 24px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__slide {
+    padding-right: 24px;
+    transition: opacity 0.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__btn {
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+
+    &--prev {
+      left: 10px;
+    }
+    &--next {
+      right: 10px;
+    }
+  }
+  @include respond(sm) {
+    display: none;
+  }
+}

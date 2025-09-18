@@ -1,3 +1,4 @@
+@import "../../styles/breakpoints";
 .checkbox {
   display: flex;
   align-items: center;
@@ -38,8 +39,16 @@
 
   &__label {
     user-select: none;
+    font-family: "Sonoma BR";
+    font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  @include respond(sm) {
+    &__label {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 }

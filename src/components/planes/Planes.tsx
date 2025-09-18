@@ -11,10 +11,11 @@ import { plansApi } from '../../services/api'
 import type { IUser } from '../../interfaces/user.interface'
 import './planes.scss'
 import { getAge } from '../../helpers/getAge'
+import Slider from '../slider/Slider'
 
 function Planes() {
-  const [selectedOption, setSelectedOption] = useState<string>();
   const [dataName, setDataName] = useState<IUser>();
+  const [selectedOption, setSelectedOption] = useState<string>();
   const navigate = useNavigate();
   const { setIsAuthenticated } = useAuth();
   const [plans, setPlans] = useState<IPlans>();
@@ -50,9 +51,6 @@ function Planes() {
     }
   }, [plans]);
 
-  console.log('plans: ', plans);
-  console.log('plansFilter: ', plansFilter);
-
   const handleBack = () => {
     localStorage.clear();
     setIsAuthenticated(false);
@@ -85,6 +83,7 @@ function Planes() {
         </div>
       </div>
       { Number(selectedOption) >= 0 && !loading &&
+        <>
         <section className='planes__options'>
           {plansFilter?.length > 0 && plansFilter?.map((card, index) => (
             <CardPlanes 
@@ -96,6 +95,8 @@ function Planes() {
             />
           ))}
         </section>
+        <Slider slides={plansFilter} type={Number(selectedOption)}/>
+        </>
       }
     </div>
   )

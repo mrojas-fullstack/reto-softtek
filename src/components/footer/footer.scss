@@ -1,3 +1,4 @@
+@import "../../styles/breakpoints";
 .footer{
   display: flex;
   align-items: center;
@@ -13,9 +14,37 @@
   &__content{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 24px;
     align-items: center;
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
+    &--logoM{
+      display: block;
+    }
+    &--logo{
+      display: none;
+    }
+  }
+  &__divider {
+    width: 100%;
+    border: 1px solid #2B304E;
+  }
+  @include respond(sm) {
+    min-height: 64px;
+    &__content{
+      flex-direction: row;
+      &--logo{
+        display: block;
+      }
+      &--logoM{
+        display: none;
+      }
+    }
+    &__divider {
+      display: none;
+    }
   }
 }

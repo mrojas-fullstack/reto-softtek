@@ -11,8 +11,9 @@ function Input({ value, onChange, error }: InputProps) {
   return (
     <>
     <div className={error ? 'input input__error' : 'input'}>
-      <label>Celular</label>
+      <label htmlFor="cell">Celular</label>
       <input
+        id="cell"
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}

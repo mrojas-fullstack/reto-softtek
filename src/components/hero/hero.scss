@@ -1,11 +1,35 @@
+@import "../../styles/breakpoints";
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 32px 0 48px 0;
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
+  font-family: "Sonoma BR";
+  font-style: normal;
+  &__bgl{
+    position: absolute;
+    left: -150px;
+    top: 150px;
+    z-index: -1;
+    backdrop-filter: blur(240px);
+    border-radius: 0px;
+  }
+  &__bgr{
+    position: absolute;
+    top: -480px;
+    right: 0;
+    z-index: -1;
+    backdrop-filter: blur(240px);
+    border-radius: 0px;
+  }
+  &__image{
+    display: none;
+  }
+  &__image-mobile{
+    display: block;
+  }
   img {
     max-width: 480px;
     border-radius: 1rem;
@@ -16,7 +40,22 @@
     justify-content: center;
   }
   &__content{
-    max-width: 360px;
+    max-width: 340px;
+  }
+  &__content-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  &__content-text{
+    display: flex;
+    flex-direction: column;
+  }
+  &__divider{
+    width: 100%;
+    margin: 24px 0;
+    border: 1px solid #CCD1EE;
   }
   &__tag{
     background: linear-gradient(86.01deg, #00F4E2 0%, #00FF7F 100%);
@@ -30,8 +69,8 @@
       font-family: "Sonoma BR";
       font-style: normal;
       font-weight: 700;
-      font-size: 14px;
       line-height: 16px;
+      font-size: 12px;
       margin: 0;
     }
   }
@@ -39,9 +78,9 @@
     font-family: "Sonoma BR";
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    padding-bottom: 4px;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0%;
     margin: 0;
   }
   &__description{
@@ -63,23 +102,51 @@
       margin-bottom: 16px;
     }
     button{
-      width: 195px;
-      height: 64px;
-      opacity: 1;
-      gap: 8px;
-      padding-top: 20px;
-      padding-right: 40px;
-      padding-bottom: 20px;
-      padding-left: 40px;
+      width: 100%;
+      padding: 20px 40px;
       border-radius: 40px;
-
       font-weight: 700;
-      font-style: Bold;
       font-size: 20px;
       line-height: 24px;
       letter-spacing: 0.4px;
       text-align: center;
-
+      margin-bottom: 196px;
+    }
+  }
+  @include respond(sm) {
+    padding: 32px 0 48px 0;
+    &__bgl{
+      top: auto;
+      bottom: auto;
+    }
+    &__bgr{
+      top: 0;
+    }
+    &__image{
+      display: block;
+    }
+    &__image-mobile{
+      display: none;
+    }
+    &__title{
+      font-size: 32px;
+      line-height: 40px;
+      padding-bottom: 4px;
+    }
+    &__tag{
+      p {
+        font-size: 14px;
+      }
+    }
+    &__divider {
+      display: none;
+    }
+    &__form{
+      button {
+        width: 195px;
+        height: 64px;
+        padding: 0;
+      }
     }
   }
 }

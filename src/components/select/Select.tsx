@@ -57,8 +57,9 @@ const Select = ({ docType, onChangeDocType, docNumber, onChangeDocNumber, error 
       <div className="select__divider"></div>
 
       <div className="select__input">
-        <label>Nro. de documento</label>
+        <label htmlFor="docNumber">Nro. de documento</label>
         <input
+          id="docNumber"
           type="text"
           value={docNumber}
           onChange={(e) => onChangeDocNumber(e.target.value)}

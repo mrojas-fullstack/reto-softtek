@@ -1,7 +1,8 @@
+@import "../../styles/breakpoints";
 .card{
   box-shadow: 0px 1px 32px 0px #AEACF359;
   background: #FFFFFF;
-  width: 256px;
+  width: 100%;
   padding: 16px 24px 40px 24px;
   border-radius: 24px;
   display: flex;
@@ -9,12 +10,13 @@
   align-items: flex-start;
   gap: 8px;
   border: 3px solid #fff;
+  box-sizing: border-box;
   &__border{
     border: 3px solid #03050F;
   }
   img {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
   }
   h1 {
     font-family: "Lato";
@@ -25,6 +27,11 @@
     margin: 0;
   }
   p {
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
     margin: 0;
   }
   &__radio{
@@ -64,6 +71,23 @@
     &--input:checked + &--style::before {
       content: '';
       display: block;
+    }
+  }
+  &__icon-title{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+  }
+  @include respond(sm) {
+    width: 256px;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    &__icon-title{
+      align-items: start;
+      flex-direction: column;
     }
   }
 }
