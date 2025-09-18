@@ -76,29 +76,29 @@ button:focus-visible {
 @font-face {
   font-family: 'Sonoma BR';
   font-weight: 400;
-  src: url('src/assets/fonts/BRSonoma-Regular.woff2');
-  src: url('src/assets/fonts/BRSonoma-Regular.woff2') format('woff2');
+  src: url('./assets/fonts/BRSonoma-Regular.woff2');
+  src: url('./assets/fonts/BRSonoma-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Sonoma BR';
   font-weight: 600;
-  src: url('src/assets/fonts/BRSonoma-SemiBold.woff2');
-  src: url('src/assets/fonts/BRSonoma-SemiBold.woff2') format('woff2');
+  src: url('./assets/fonts/BRSonoma-SemiBold.woff2');
+  src: url('./assets/fonts/BRSonoma-SemiBold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Sonoma BR';
   font-weight: 700;
-  src: url('src/assets/fonts/BRSonoma-Bold.woff2');
-  src: url('src/assets/fonts/BRSonoma-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/BRSonoma-Bold.woff2');
+  src: url('./assets/fonts/BRSonoma-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Sonoma BR';
   font-weight: 800;
-  src: url('src/assets/fonts/BRSonoma-Black.woff2');
-  src: url('src/assets/fonts/BRSonoma-Black.woff2') format('woff2');
+  src: url('./assets/fonts/BRSonoma-Black.woff2');
+  src: url('./assets/fonts/BRSonoma-Black.woff2') format('woff2');
 }
 
 @font-face {
@@ -106,7 +106,7 @@ button:focus-visible {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: url('src/assets/fonts/Lato-Regular.woff2') format('woff2');
+  src: url('./assets/fonts/Lato-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -114,7 +114,7 @@ button:focus-visible {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: url('src/assets/fonts/Lato-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/Lato-Bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -122,5 +122,5 @@ button:focus-visible {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
-  src: url('src/assets/fonts/Lato-Black.woff2') format('woff2');
+  src: url('./assets/fonts/Lato-Black.woff2') format('woff2');
 }

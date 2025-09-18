@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import "./Checkbox.scss";
+import "./checkbox.scss";
 
 interface CheckboxProps {
   label: string;
