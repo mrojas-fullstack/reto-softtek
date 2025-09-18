@@ -19,39 +19,15 @@ export const cards = [
 export const cardsPlanesUser = [
     {
       recomended: false,
-      icon: iconHome,
-      title: 'Plan en Casa',
-      cost: '$39 al mes',
-      mark: '',
-      description: [
-        'Médico general a domicilio por S/20 y medicinas cubiertas al 100%.',
-        'Videoconsulta y orientación telefónica  al 100% en medicina general + pediatría.',
-        'Indemnización de S/300 en caso de hospitalización por más de un día.'
-      ],
+      icon: iconHome
     },
     {
       recomended: true,
-      icon: iconHospital,
-      title: 'Plan en Casa y Clínica',
-      cost: '$99 al mes',
-      mark: '',
-      description: [
-        'Consultas en clínica para cualquier especialidad.',
-        'Medicinas y exámenes derivados cubiertos al 80%',
-        'Atención médica en más de 200 clínicas del país.'
-      ],
+      icon: iconHospital
     },
     {
       recomended: false,
-      icon: iconHome,
-      title: 'Plan en Casa + Chequeo ',
-      cost: '$49 al mes',
-      mark: '',
-      description: [
-        'Un Chequeo preventivo general de manera presencial o virtual.',
-        'Acceso a Vacunas en el Programa del MINSA en centros privados.',
-        'Incluye todos los beneficios del Plan en Casa.'
-      ],
+      icon: iconHome
     }
 ];
 

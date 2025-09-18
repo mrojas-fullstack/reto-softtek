@@ -26,6 +26,10 @@
     background: #fff;
     transition: all 0.2s ease;
 
+    &--error {
+      border: 1px solid #e63636;
+    }
+
     &--checked {
       background: #0b0720;
       border-color: #0b0720;

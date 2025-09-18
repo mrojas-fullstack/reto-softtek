@@ -1,18 +1,22 @@
-import { useState } from "react";
 import { Check } from "lucide-react";
 import "./Checkbox.scss";
 
-const Checkbox = ({ label } : {label: string}) => {
-  const [checked, setChecked] = useState(false);
+interface CheckboxProps {
+  label: string;
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+  error?: string;
+}
 
+const Checkbox = ({ label, checked, onChange, error }: CheckboxProps) => {
   return (
-    <label className="checkbox">
+    <label className='checkbox'>
       <input
         type="checkbox"
         checked={checked}
-        onChange={() => setChecked(!checked)}
+        onChange={() => onChange(!checked)}
       />
-      <span className={`checkbox__box ${checked ? "checkbox__box--checked" : ""}`}>
+      <span className={`${error ? 'checkbox__box checkbox__box--error' : 'checkbox__box'} ${checked ? "checkbox__box--checked" : ""}`}>
         {checked && <Check size={16} strokeWidth={3.5} className="checkbox__icon" />}
       </span>
       {label && <span className="checkbox__label">{label}</span>}

@@ -1,32 +1,41 @@
+import { useNavigate } from 'react-router-dom';
 import './cardPlanes.scss'
 
 interface CardPlanesProps {
-  recomended: boolean,
-  icon: string,
-  title: string,
-  cost: string,
-  mark: string,
+  name: string,
+  price: number,
   description: Array<string>,
 }
 
 interface Card{
-  card: CardPlanesProps
+  card: CardPlanesProps,
+  recomended: boolean,
+  icon: string,
+  type: number,
 }
 
-function CardPlanes( { card }: Card ) {
+function CardPlanes( { card, recomended, icon, type }: Card ) {
+  const navigate = useNavigate();
+
+  const handlePlan = (dataCard: any) => {
+    localStorage.setItem("userPlan", JSON.stringify({
+      name: dataCard.name,
+      price: type !== 0 ? dataCard.price  - 0.05*dataCard.price : dataCard.price
+    }));
+    navigate('/resumen');
+  }  
 
   return (
     <div className='card-planes'>
-      {card.recomended && <p className='card-planes__recomended'>Plan recomendado</p>}
+      {recomended && <p className='card-planes__recomended'>Plan recomendado</p>}
       <div className='card-planes__title'>
         <div className='card-planes__title--text'>
-          {card.title && <h1>{card.title}</h1>}
+          {card.name && <h1>{card.name}</h1>}
           <p>COSTO DE PLAN</p>
-          {card.mark !== '' && <span>{card.mark}</span>}
-          {card.cost && <h2>{card.cost}</h2>}
-          
+          {type !== 0 && <span>${card.price} antes</span>}
+          {type !== 0 ? <h2>${card.price  - 0.05*card.price} al mes</h2> : <h2>${card.price} al mes</h2>}
         </div>
-        {card.icon && <img src={card.icon} alt="Icon"/>}
+        {icon && <img src={icon} alt="Icon"/>}
       </div>
       <div className='card-planes__divider'></div>
       <div className='card-planes__content'>
@@ -35,7 +44,7 @@ function CardPlanes( { card }: Card ) {
           <li key={index}>{desc}</li>
         ))}
         </ul>
-        <button className='card-planes__content--button'>Seleccionar Plan</button>
+        <button className='card-planes__content--button' onClick={() => handlePlan(card)}>Seleccionar Plan</button>
       </div>
     </div>
     

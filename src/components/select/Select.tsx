@@ -1,24 +1,28 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, CircleAlert } from "lucide-react";
 import "./select.scss";
 
-const Select = () => {
+interface SelectProps {
+  docType: string;
+  onChangeDocType: (value: string) => void;
+  docNumber: string;
+  onChangeDocNumber: (value: string) => void;
+  error?: string;
+}
+
+const Select = ({ docType, onChangeDocType, docNumber, onChangeDocNumber, error }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [docType, setDocType] = useState("DNI");
-  const [docNumber, setDocNumber] = useState("");
   const options = ["DNI", "CE", "Pasaporte"];
+  const selectRef = useRef<HTMLDivElement>(null);
 
-  const selectRef = useRef(null) as any;
-
-  const handleSelect = (option: any) => {
-    setDocType(option);
+  const handleSelect = (option: string) => {
+    onChangeDocType(option);
     setIsOpen(false);
   };
 
-  // Detectar clic fuera del select
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (selectRef.current && !selectRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -30,7 +34,8 @@ const Select = () => {
   }, []);
 
   return (
-    <div className="select">
+    <>
+    <div className={error ? 'select select__error' : 'select'}>
       <div 
         className="select__dropdown" 
         ref={selectRef}
@@ -56,11 +61,13 @@ const Select = () => {
         <input
           type="text"
           value={docNumber}
-          onChange={(e) => setDocNumber(e.target.value)}
+          onChange={(e) => onChangeDocNumber(e.target.value)}
           required
         />
       </div>
     </div>
+    {error && <p className="select__error-message"><CircleAlert width={16} height={16} color="#ec0b35"/> {error}</p>}
+    </>
   );
 };
 

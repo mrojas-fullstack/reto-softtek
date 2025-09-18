@@ -7,7 +7,25 @@
   border: 1px solid #444;
   border-radius: 8px;
   background: #f9faff;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+
+  &__error{
+    border: 1px solid #e71717;
+  }
+
+  &__error-message{
+    font-family: "Sonoma BR";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ec0b35;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 24px;
+  }
 
   label {
     font-size: 0.8rem;

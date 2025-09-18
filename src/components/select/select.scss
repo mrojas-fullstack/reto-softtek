@@ -7,16 +7,34 @@
   min-width: 360px;
   position: relative;
   min-height: 56px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
-  .select__icon {
+  &__error-message{
+    font-family: "Sonoma BR";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ec0b35;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__error{
+    border: 1px solid #ec0b35;
+  }
+
+  &__icon {
     transition: transform 0.2s ease;
     &--open {
       transform: rotate(180deg);
     }
   }
 
-  .select__dropdown {
+  &__dropdown {
     flex: 0 0 100px;
     display: flex;
     align-items: center;
